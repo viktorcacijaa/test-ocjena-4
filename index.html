@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas: 
+        "header header ads"
+        "nav article article"
+        "footer footer footer";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      padding: 10px;
+      min-height: 90vh;
+      background-color: #fff;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #e100a9;
+      padding: 10px;
+    }
+
+    .ads {
+      grid-area: ads;
+      background-color: #e10000;
+      padding: 10px;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #9ae100;
+      padding: 10px;
+    }
+
+    .article {
+      grid-area: article;
+      background-color: #8e00e1;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #00e1d2;
+      padding: 10px;
+    }
+
+    
+    @media (max-width: 680px) {
+      .container {
+        grid-template-areas: 
+          "header"
+          "ads"
+          "nav"
+          "article"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="ads">Ads</div>
+    <div class="nav">Nav</div>
+    <div class="article">Article</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
