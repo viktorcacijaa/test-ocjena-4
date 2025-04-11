@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Grid Layout</title>
+  <title>SŠ Silvija Strahimira Kranjčevića</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
+      background-color: #f0f0f0;
     }
 
     .container {
@@ -27,34 +28,59 @@
     .header {
       grid-area: header;
       background-color: #e100a9;
-      padding: 10px;
+      padding: 20px;
+      color: white;
     }
 
     .ads {
       grid-area: ads;
       background-color: #e10000;
-      padding: 10px;
+      padding: 20px;
+      color: white;
+      text-align: center;
     }
 
     .nav {
       grid-area: nav;
       background-color: #9ae100;
-      padding: 10px;
+      padding: 20px;
     }
 
     .article {
       grid-area: article;
       background-color: #8e00e1;
-      padding: 10px;
+      padding: 20px;
+      color: white;
     }
 
     .footer {
       grid-area: footer;
       background-color: #00e1d2;
-      padding: 10px;
+      padding: 15px;
+      text-align: center;
     }
 
-    
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 680px) {
       .container {
         grid-template-areas: 
@@ -64,18 +90,45 @@
           "article"
           "footer";
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
+        grid-template-rows: auto;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">Header</div>
-    <div class="ads">Ads</div>
-    <div class="nav">Nav</div>
-    <div class="article">Article</div>
-    <div class="footer">Footer</div>
+    <div class="header">
+      <h1>SŠ Silvija Strahimira Kranjčevića</h1>
+      <p>Mjesto znanja, stručnosti i budućnosti</p>
+    </div>
+
+    <div class="ads">
+      <h3>Upisi 2025./2026.</h3>
+      <p>Ne propustite priliku - osigurajte svoje mjesto!</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Iconic_image_of_education.svg/800px-Iconic_image_of_education.svg.png" alt="Edukacija">
+    </div>
+
+    <div class="nav">
+      <h3>Izbornik</h3>
+      <ul>
+        <li><a href="#">Naslovnica</a></li>
+        <li><a href="#">O školi</a></li>
+        <li><a href="#">Smjerovi</a></li>
+        <li><a href="#">Upisi</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h2>O školi</h2>
+      <p>Srednja strukovna škola Silvija Strahimira Kranjčevića jedna je od najmodernijih strukovnih škola u Zagrebu. Nudi kvalitetno obrazovanje u tehničkim i strukovnim programima s naglaskom na praksu, inovacije i digitalne vještine.</p>
+      <p>Učenici imaju priliku učiti od iskusnih nastavnika, sudjelovati u međunarodnim projektima, natjecanjima i radionicama.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Modern_school_building.jpg" alt="Školska zgrada">
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 SŠ Silvija Strahimira Kranjčevića | <a href="https://www.ss-ssk.hr" target="_blank">www.ss-ssk.hr</a></p>
+    </div>
   </div>
 </body>
 </html>
